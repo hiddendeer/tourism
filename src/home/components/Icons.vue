@@ -101,6 +101,10 @@ export default {
   padding-bottom: 50%;
 }
 
+.icons {
+  margin-top: 0.1rem;
+}
+
 .icon {
   position: relative;
   overflow: hidden;
@@ -136,7 +140,7 @@ export default {
     text-align: center;
     line-height: 3.11rem;
     color: $darkTextColor;
-    ellipsis()
+    ellipsis();
   }
 }
 </style>
