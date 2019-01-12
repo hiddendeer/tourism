@@ -25,6 +25,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~styles/mixins.styl';
+
 .title {
   line-height: 0.8rem;
   margin-top: 0.2rem;
@@ -47,22 +49,28 @@ export default {
 .item-info {
   flex: 1;
   padding: 0.1rem;
+  min-width: 0;
 }
 
 .item-title {
+  overflow: hidden;
   line-height: 0.54rem;
-  font-size: 0.32rem;
+  font-size: 0.28rem;
+  ellipsis();
 }
 
 .item-desc {
+  overflow: hidden;
   line-height: 0.4rem;
   color: #ccc;
+  font-size: 0.22rem;
+  ellipsis();
 }
 
 .item-button {
   margin-top: 0.1rem;
   background: #ff9300;
-  padding: 0.2rem;
+  padding: 0.07rem;
   border-radius: 0.06rem;
   color: #fff;
 }
