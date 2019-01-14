@@ -32,8 +32,8 @@ export default {
           id: "0002",
           imgUrl:
             "http://img1.qunarzz.com/sight/source/1505/f1/ae9d4299b8aaea.jpg_r_640x214_0c555905.jpg",
-          title: "南京总统府",
-          desc: "南京总统府现在已成为记录中国近代史的博物馆。"
+          title: "南京夫子庙",
+          desc: "南京夫子庙来南京必去的地方。"
         },
         {
           id: "0003",
