@@ -5,7 +5,7 @@
       <home-swiper :list="swiperList"></home-swiper>
       <home-icons :list="iconsList"></home-icons>
       <home-recommend :list="recommendList"></home-recommend>
-      <home-weekend></home-weekend>
+      <home-weekend :list="weekendList"></home-weekend>
     </div>
   </div>
 </template>
@@ -32,7 +32,8 @@ export default {
       city: "南京",
       swiperList: [],
       recommendList: [],
-      iconsList: []
+      iconsList: [],
+      weekendList: []
     };
   },
   methods: {
@@ -40,12 +41,13 @@ export default {
       axios.get("/api/index.json").then(this.getHomeInfoSucc);
     },
     getHomeInfoSucc(res) {
-      res = res.data
+      res = res.data;
       if (res.ret && res.data) {
         const data = res.data;
         this.swiperList = data.swiperList;
         this.recommendList = data.recommendList;
         this.iconsList = data.iconsList;
+        this.weekendList = data.weekendList;
       }
     }
   },
