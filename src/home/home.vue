@@ -38,11 +38,8 @@ export default {
       axios.get("/api/index.json").then(this.getHomeInfoSucc);
     },
     getHomeInfoSucc(res) {
-      if (res.data && res.ret) {
-        const data = res.data;
-        this.city = data.city;
-        this.swiperList = data.swiperList;
-      }
+     
+      this.swiperList = res.data.recommendList
     }
   },
 
