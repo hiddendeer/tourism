@@ -60,7 +60,6 @@ export default {
 
 .title {
   line-height: 0.8rem;
-  margin-top: 0.2rem;
   background: #eee;
   text-indent: 0.2rem;
 }
