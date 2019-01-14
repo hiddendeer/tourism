@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showSwiper">
       <swiper-slide v-for="item of list" :key="item.id">
         <img :src="item.imgUrl" class="swiper-img">
       </swiper-slide>
@@ -20,13 +20,18 @@ export default {
   data() {
     return {
       swiperOption: {
-        pagination: ".swiper-pagination",
+        pagination: ".swiper-pagination",//banner的凹槽
         loop: true
       },
       mounted() {
         this.swiper.slideTo(3, 1000, false);
       }
     };
+  },
+  computed:{
+    showSwiper() {
+      return this.list.length;
+    }
   }
 };
 </script>

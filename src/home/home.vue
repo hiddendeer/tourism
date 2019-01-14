@@ -3,8 +3,8 @@
     <div>
       <home-header :city="city"></home-header>
       <home-swiper :list="swiperList"></home-swiper>
-      <home-icons></home-icons>
-      <home-recommend></home-recommend>
+      <home-icons :list="iconsList"></home-icons>
+      <home-recommend :list="recommendList"></home-recommend>
       <home-weekend></home-weekend>
     </div>
   </div>
@@ -30,7 +30,9 @@ export default {
   data() {
     return {
       city: "南京",
-      swiperList: []
+      swiperList: [],
+      recommendList: [],
+      iconsList: []
     };
   },
   methods: {
@@ -38,11 +40,15 @@ export default {
       axios.get("/api/index.json").then(this.getHomeInfoSucc);
     },
     getHomeInfoSucc(res) {
-     
-      this.swiperList = res.data.recommendList
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data;
+        this.swiperList = data.swiperList;
+        this.recommendList = data.recommendList;
+        this.iconsList = data.iconsList;
+      }
     }
   },
-
   mounted() {
     this.getHomeInfo();
   }
