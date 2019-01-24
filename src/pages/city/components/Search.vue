@@ -27,6 +27,5 @@ export default {
   text-align: center;
   border-radius: 0.06rem;
   color: #666;
-  // padding 0 0.1rem
 }
 </style>
