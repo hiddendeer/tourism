@@ -46,14 +46,16 @@ export default {
         const data = res.data;
         this.swiperList = data.swiperList;
         this.recommendList = data.recommendList;
-        this.iconsList = data.iconsList;
+        this.iconsList = data.iconList;
         this.weekendList = data.weekendList;
       }
-    }
+    },
+
   },
   mounted() {
     this.getHomeInfo();
-  }
+  },
+
 };
 </script>
 

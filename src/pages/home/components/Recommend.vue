@@ -8,7 +8,7 @@
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
-          <button class="item-button">查看详情</button>
+          <button class="item-button" >查看详情</button>
         </div>
       </li>
     </ul>
@@ -21,6 +21,7 @@ export default {
   props:{
     list:Array
   },
+
 };
 </script>
 
@@ -29,7 +30,7 @@ export default {
 
 .title {
   line-height: 0.8rem;
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
   background: #eee;
   text-indent: 0.2rem;
 }
