@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      city: "南京",
+      city: this.$store.state.city,
       swiperList: [],
       recommendList: [],
       iconsList: [],
