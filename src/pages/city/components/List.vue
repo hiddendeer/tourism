@@ -12,9 +12,9 @@
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list" >
-          <div class="button-wrapper" v-for="item of hot" :key="item.id" @click="handleCityClick(item.name)">
+          <span class="button-wrapper" v-for="item of hot" :key="item.id" @click="handleCityClick(item.name)">
             <div class="button">{{item.name}}</div>
-          </div>
+          </span>
         </div>
       </div>
       <div 
@@ -42,12 +42,15 @@ export default {
     letter: String
   },
   methods:{
-    handleCityClick:city=>{
+    handleCityClick(city){
       this.$store.dispatch('changeCity',city)
+      // this.$router.push({path:'/', query: { plan: 'private' }})
     }
   },
   mounted() {
-    this.scroll = new Bscroll(this.$refs.wrapper);
+    this.scroll = new Bscroll(this.$refs.wrapper,{
+      click:true
+    });
   },
   watch: {
     letter () {
