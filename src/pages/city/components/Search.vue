@@ -1,12 +1,20 @@
 <template>
   <div class="search">
-    <input class="search-input" type="text" placeholder="输入城市名或拼音">
+    <input class="search-input" type="text" placeholder="输入城市名或拼音" />
   </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
-  name: "CitySearch"
+  name: "CitySearch",
+  methods: {
+    handleCityClick(city) {
+      this.changeCity(city);
+      this.$router.push("/");
+    },
+    ...mapMutations(["changeCity"]),
+  },
 };
 </script>
 
