@@ -60,6 +60,7 @@ export default {
     });
   },
   watch: {
+
     letter () {
       if (this.letter) {
         const element = this.$refs[this.letter][0];

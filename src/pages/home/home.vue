@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <home-header :city="city"></home-header>
+      <home-header></home-header>
       <home-swiper :list="swiperList"></home-swiper>
       <home-icons :list="iconsList"></home-icons>
       <home-recommend :list="recommendList"></home-recommend>
@@ -29,7 +29,6 @@ export default {
   },
   data() {
     return {
-      city: this.$store.state.city,
       swiperList: [],
       recommendList: [],
       iconsList: [],
